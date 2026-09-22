@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
-  <title>Ferramentas de Cálculo Policial-Militar</title>
+  <title>Ferramentas PJM</title>
   <meta name="description" content="Acesso às calculadoras de ausência e deserção e de comportamento policial-militar.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://desercao.com.br/">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ferramentas de Cálculo Policial-Militar">
+  <meta property="og:title" content="Ferramentas PJM">
   <meta property="og:description" content="Calculadoras auxiliares de ausência, deserção e comportamento policial-militar.">
   <meta property="og:url" content="https://desercao.com.br/">
   <style>
@@ -33,7 +33,13 @@
     .tool h2{margin:17px 0 7px;color:var(--olive);font-size:1.25rem}.tool p{margin:0 0 20px;color:var(--muted)}
     .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;margin-top:auto;padding:0 18px;color:#fff;background:var(--olive);border-radius:11px;font-weight:800;text-decoration:none}.button:hover{background:var(--olive2)}
     .notice{margin-top:20px;padding:15px 18px;color:#565b49;background:#fbf7eb;border-left:4px solid var(--gold);border-radius:10px;font-size:.86rem}
-    footer{margin-top:17px;color:var(--muted);font-size:.78rem;text-align:center}
+    footer{margin-top:22px;padding:21px 16px;color:var(--muted);background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:14px;text-align:center}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:9px 18px;margin-bottom:13px}
+    .footer-links a{color:var(--olive);font-size:.84rem;font-weight:750;text-decoration:none}
+    .footer-links a:hover{text-decoration:underline}
+    .footer-contact{display:inline-flex;align-items:center;gap:6px;color:var(--olive);font-weight:750;text-decoration:none}
+    .footer-contact:hover{text-decoration:underline}
+    .copyright{display:block;margin-top:11px;font-size:.76rem}
     @media(max-width:700px){main{width:min(100% - 20px,1050px);margin-top:22px}.tools{grid-template-columns:1fr}.brand{gap:13px;padding:15px}.mark{width:58px;height:58px;flex-basis:58px}.mark svg{width:39px;height:39px}.monogram{display:none}.intro{padding:24px 8px 20px}.tool{min-height:250px}}
   </style>
 </head>
@@ -43,7 +49,7 @@
     <header>
       <div class="brand" aria-label="Identidade visual das ferramentas">
         <div class="mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 49h40M17 49V24l15-10 15 10v25M25 49V35h14v14M23 27h18"></path><circle cx="32" cy="9" r="3"></circle></svg></div>
-        <div class="brand-copy"><small>Ferramentas de apoio</small><strong>Cálculos Policial-Militares</strong><span>Acesso centralizado às calculadoras auxiliares</span></div>
+        <div class="brand-copy"><small>Ferramentas de apoio</small><strong>Ferramentas PJM</strong><span>Acesso centralizado às calculadoras auxiliares</span></div>
         <div class="monogram">PM</div>
       </div>
       <div class="intro">
@@ -62,14 +68,24 @@
 
       <article class="tool">
         <div class="tool-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 39h28M14 39V18l10-7 10 7v21M19 24h10M19 30h10"></path><circle cx="24" cy="7" r="2"></circle></svg></div>
-        <h2>Comportamento Policial-Militar</h2>
+        <h2>Aferição Comportamento PMESP</h2>
         <p>Analisa o comportamento atual, o histórico, as sanções registradas e a evolução projetada conforme os critérios da ferramenta.</p>
         <a class="button" href="./calculadora-comportamento.html">Abrir calculadora <span aria-hidden="true">→</span></a>
       </article>
     </section>
 
     <div class="notice"><strong>Aviso:</strong> as ferramentas têm caráter auxiliar e orientativo. Os resultados devem ser conferidos pela autoridade competente e confrontados com a legislação e as normas vigentes.</div>
-    <footer>Ferramentas de apoio — uso responsável das informações.</footer>
+    <footer>
+      <nav class="footer-links" aria-label="Informações institucionais">
+        <a href="./informacoes.html#sobre">Sobre a ferramenta</a>
+        <a href="./informacoes.html#privacidade">Política de privacidade</a>
+        <a href="./informacoes.html#termos">Termos de uso</a>
+        <a href="./informacoes.html#explicacoes">Ausência, deserção e comportamento</a>
+        <a href="./informacoes.html#contato">Contato</a>
+      </nav>
+      <a class="footer-contact" href="https://wa.me/5519992906886" target="_blank" rel="noopener" aria-label="Contato pelo WhatsApp">WhatsApp: (19) 99290-6886</a>
+      <span class="copyright">Ferramentas PJM — uso responsável das informações.</span>
+    </footer>
   </main>
 </body>
 </html>
