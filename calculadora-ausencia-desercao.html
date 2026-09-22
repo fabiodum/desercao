@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Calculadora de Ausência Ilegal e Deserção Militar</title>
+  <meta name="description" content="Calculadora orientativa dos marcos temporais da falta, ausência ilegal e deserção militar, conforme o Código Penal Militar e o Código de Processo Penal Militar.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://desercao.com.br/calculadora-ausencia-desercao.html">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Calculadora de Ausência e Deserção">
+  <meta property="og:title" content="Calculadora de Ausência Ilegal e Deserção Militar">
+  <meta property="og:description" content="Calcule os marcos temporais da falta, ausência ilegal e deserção militar de forma orientativa.">
+  <meta property="og:url" content="https://desercao.com.br/calculadora-ausencia-desercao.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Calculadora de Ausência Ilegal e Deserção Militar">
+  <meta name="twitter:description" content="Cálculo orientativo dos marcos temporais da falta, ausência ilegal e deserção militar.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de Ausência Ilegal e Deserção Militar",
+    "url": "https://desercao.com.br/calculadora-ausencia-desercao.html",
+    "description": "Calculadora orientativa dos marcos temporais da falta, ausência ilegal e deserção militar.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Qualquer",
+    "inLanguage": "pt-BR",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --navy: #3f4a2f;
+      --navy-2: #65724b;
+      --gold: #a99657;
+      --paper: #f5f3ee;
+      --white: #ffffff;
+      --ink: #182230;
+      --muted: #647184;
+      --line: #d8dee7;
+      --danger: #a33a3a;
+      --shadow: 0 18px 50px rgba(20, 38, 61, .13);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(202,163,75,.16), transparent 25rem),
+        linear-gradient(135deg, #eef1f5, var(--paper));
+    }
+
+    .topbar { height: 8px; background: linear-gradient(90deg, var(--navy), var(--gold), var(--navy)); }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: .88rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .home-link:hover { text-decoration: underline; }
+
+    main { width: min(1040px, calc(100% - 32px)); margin: 34px auto 48px; }
+
+    header { margin-bottom: 24px; text-align: center; }
+
+    .brand-banner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(135deg, #343d28, #596642 68%, #737c58);
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(52, 61, 40, .2);
+      text-align: left;
+    }
+
+    .brand-banner::after { content: ""; position: absolute; right: 74px; width: 150px; height: 150px; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; }
+    .brand-icon { position: relative; z-index: 1; display: grid; width: 70px; height: 70px; flex: 0 0 70px; place-items: center; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.25); border-radius: 16px; }
+    .brand-icon svg { width: 48px; height: 48px; fill: none; stroke: #e2d49b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .brand-copy { position: relative; z-index: 1; }
+    .brand-copy small { display: block; margin-bottom: 2px; color: #d9dcbf; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .brand-copy strong { display: block; font-size: clamp(1.25rem, 3vw, 1.8rem); line-height: 1.15; text-transform: uppercase; }
+    .brand-copy span { display: block; margin-top: 4px; color: #e6e9d6; font-size: .84rem; }
+    .brand-monogram { position: relative; z-index: 1; margin-left: auto; color: rgba(255,255,255,.18); font-size: 3rem; font-weight: 900; letter-spacing: -.08em; }
+
+    h1 { margin: 0; color: var(--navy); font-size: clamp(1.45rem, 4vw, 2.2rem); line-height: 1.1; }
+    .subtitle { margin: 5px 0 0; color: var(--muted); }
+
+    .panel {
+      padding: clamp(20px, 4vw, 34px);
+      background: rgba(255,255,255,.94);
+      border: 1px solid rgba(216,222,231,.9);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: 1rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field-wide { grid-column: 1 / -1; }
+    label { display: block; margin-bottom: 7px; color: var(--navy); font-size: .9rem; font-weight: 700; }
+
+    input {
+      width: 100%;
+      min-height: 50px;
+      padding: 11px 13px;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid #bbc5d2;
+      border-radius: 11px;
+      font: inherit;
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+    }
+
+    input:focus { border-color: var(--navy-2); box-shadow: 0 0 0 4px rgba(32,60,94,.12); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    button {
+      min-height: 46px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 11px;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .primary { color: white; background: var(--navy); }
+    .secondary { color: var(--navy); background: #e9edf2; }
+    .primary:hover { background: var(--navy-2); }
+
+    #erro {
+      display: none;
+      margin: 16px 0 0;
+      padding: 12px 14px;
+      color: var(--danger);
+      background: #fff0f0;
+      border: 1px solid #efcaca;
+      border-radius: 10px;
+      font-weight: 650;
+    }
+
+    #resultado { display: none; margin-top: 26px; }
+    .result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+      margin: 0 0 14px;
+      padding: 15px;
+      color: var(--navy);
+      background: #f0f3f7;
+      border-radius: 11px;
+      font-size: .9rem;
+    }
+
+    .identity-grid .wide { grid-column: 1 / -1; }
+
+    .result-card {
+      position: relative;
+      min-height: 160px;
+      padding: 20px;
+      overflow: hidden;
+      background: #fafbfc;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+
+    .result-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--gold); }
+    .result-card small { display: block; margin-bottom: 12px; color: var(--muted); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .result-card strong { display: block; color: var(--navy); font-size: 1.22rem; line-height: 1.35; }
+    .result-card p { margin: 10px 0 0; color: var(--muted); font-size: .84rem; line-height: 1.45; }
+
+    .schedule {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 0 16px;
+      padding: 13px 15px;
+      color: var(--navy);
+      background: #f0f3f7;
+      border-radius: 11px;
+      font-size: .9rem;
+    }
+
+    .legal {
+      margin-top: 24px;
+      padding: 18px 20px;
+      color: #435064;
+      background: #fbf7eb;
+      border-left: 4px solid var(--gold);
+      border-radius: 10px;
+      font-size: .88rem;
+      line-height: 1.6;
+    }
+
+    .legal strong { color: var(--navy); }
+    footer { margin-top: 16px; color: var(--muted); font-size: .78rem; text-align: center; }
+
+    @media (max-width: 760px) {
+      main { width: min(100% - 20px, 1040px); margin-top: 22px; }
+      .form-grid, .result-grid { grid-template-columns: 1fr; }
+      .field-wide, .identity-grid .wide { grid-column: auto; }
+      .identity-grid { grid-template-columns: 1fr; }
+      .schedule { flex-direction: column; }
+      .brand-banner { gap: 13px; padding: 14px; }
+      .brand-icon { width: 58px; height: 58px; flex-basis: 58px; }
+      .brand-icon svg { width: 40px; height: 40px; }
+      .brand-monogram { display: none; }
+    }
+
+    @media print {
+      body { background: white; }
+      main { width: 100%; margin: 0; }
+      .panel { box-shadow: none; border: 1px solid #aaa; }
+      .actions, .topbar, .home-link { display: none; }
+      #resultado { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <main>
+    <a class="home-link" href="./index.html" aria-label="Voltar à página inicial">← Voltar às ferramentas</a>
+    <header>
+      <div class="brand-banner" aria-label="Identidade visual da calculadora"><div class="brand-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="12" width="46" height="43" rx="9"></rect><path d="M20 8v10M44 8v10M9 24h46"></path><circle cx="33" cy="39" r="10"></circle><path d="M33 33v7l5 3"></path></svg></div><div class="brand-copy"><small>Controle de prazos</small><strong>Ausência e Deserção</strong><span>Cálculo orientativo de datas críticas</span></div><div class="brand-monogram">AD</div></div>
+      <div>
+        <h1>Calculadora de Ausência Ilegal e Deserção Militar</h1>
+        <p class="subtitle">Apuração orientativa dos marcos temporais da falta, ausência ilegal e deserção conforme o CPM e o CPPM.</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <form id="formulario" novalidate>
+        <h2 class="section-title">Identificação do policial militar</h2>
+        <div class="form-grid">
+          <div>
+            <label for="posto">Posto/Graduação</label>
+            <input id="posto" type="text" maxlength="30" autocomplete="off" required placeholder="Ex.: Cb PM">
+          </div>
+          <div>
+            <label for="re">R.E.</label>
+            <input id="re" type="text" maxlength="20" autocomplete="off" required placeholder="Ex.: 123456-7">
+          </div>
+          <div class="field-wide">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" maxlength="120" autocomplete="name" required>
+          </div>
+          <div class="field-wide">
+            <label for="opm">OPM</label>
+            <input id="opm" type="text" maxlength="80" autocomplete="organization" required placeholder="Ex.: Unidade de origem">
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 28px;">Horário previsto do serviço</h2>
+        <div class="form-grid">
+          <div>
+            <label for="entrada">Data e hora de entrada</label>
+            <input id="entrada" type="datetime-local" required>
+          </div>
+          <div>
+            <label for="saida">Data e hora de saída</label>
+            <input id="saida" type="datetime-local" required>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="primary" type="submit">Calcular marcos</button>
+          <button class="secondary" type="button" id="limpar">Limpar</button>
+          <button class="secondary" type="button" id="imprimir">Imprimir</button>
+        </div>
+        <div id="erro" role="alert"></div>
+      </form>
+
+      <section id="resultado" aria-live="polite">
+        <h2 class="section-title">Resultado</h2>
+        <div class="identity-grid">
+          <span><b>Posto/Graduação:</b> <span id="resPosto"></span></span>
+          <span><b>R.E.:</b> <span id="resRe"></span></span>
+          <span class="wide"><b>Nome completo:</b> <span id="resNome"></span></span>
+          <span class="wide"><b>OPM:</b> <span id="resOpm"></span></span>
+        </div>
+        <div class="schedule">
+          <span><b>Entrada prevista:</b> <span id="resEntrada"></span></span>
+          <span><b>Saída prevista:</b> <span id="resSaida"></span></span>
+        </div>
+        <div class="result-grid">
+          <article class="result-card">
+            <small>1 · Confirmação da falta</small>
+            <strong id="falta"></strong>
+            <p>Após o término integral do serviço previsto, momento a partir do qual deverá ser confeccionado o documento da falta.</p>
+          </article>
+          <article class="result-card">
+            <small>2 · Início da contagem</small>
+            <strong id="inicioContagem"></strong>
+            <p>Primeira zero hora posterior ao término da escala.</p>
+          </article>
+          <article class="result-card">
+            <small>3 · Parte de Ausência Ilegal</small>
+            <strong id="ausencia"></strong>
+            <p>Marco de 24 horas após o início da contagem dos dias de ausência, para emissão da parte de ausência.</p>
+          </article>
+          <article class="result-card">
+            <small>4 · Deserção</small>
+            <strong id="desercao"></strong>
+            <p>Consumação após o período de graça de oito dias, à zero hora do nono dia de contagem.</p>
+          </article>
+        </div>
+      </section>
+
+      <aside class="legal">
+        <strong>Critério adotado.</strong> A falta é confirmada após o término integral do horário previsto para o serviço, pois a apresentação anterior a esse marco caracteriza atraso, e não falta. A contagem começa na primeira zero hora posterior ao término da escala. A Parte de Ausência Ilegal é confeccionada 24 horas após o início dessa contagem. Art. 187 do Código Penal Militar: ausência sem licença por mais de oito dias. Art. 451, § 1º, do Código de Processo Penal Militar: a contagem começa à zero hora do dia seguinte ao da falta injustificada. Para praça, o art. 456 prevê a parte de ausência 24 horas depois de iniciada essa contagem. O resultado é orientativo e deve ser conferido com as circunstâncias do caso e as normas administrativas aplicáveis.
+      </aside>
+    </section>
+    <footer>Os horários são calculados no fuso local do dispositivo.</footer>
+  </main>
+
+  <script>
+    const form = document.getElementById('formulario');
+    const postoEl = document.getElementById('posto');
+    const reEl = document.getElementById('re');
+    const nomeEl = document.getElementById('nome');
+    const opmEl = document.getElementById('opm');
+    const entradaEl = document.getElementById('entrada');
+    const saidaEl = document.getElementById('saida');
+    const resultado = document.getElementById('resultado');
+    const erro = document.getElementById('erro');
+
+    const formatar = (data) => new Intl.DateTimeFormat('pt-BR', {
+      dateStyle: 'full',
+      timeStyle: 'short'
+    }).format(data);
+
+    const meiaNoiteSomada = (data, dias) => {
+      const marco = new Date(data.getFullYear(), data.getMonth(), data.getDate(), 0, 0, 0, 0);
+      marco.setDate(marco.getDate() + dias);
+      return marco;
+    };
+
+    const escaparHTML = (valor) => String(valor).replace(/[&<>"']/g, (caractere) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    })[caractere]);
+
+    function mostrarErro(mensagem) {
+      erro.textContent = mensagem;
+      erro.style.display = 'block';
+      resultado.style.display = 'none';
+    }
+
+    form.addEventListener('submit', (evento) => {
+      evento.preventDefault();
+      erro.style.display = 'none';
+
+      if (!postoEl.value.trim() || !reEl.value.trim() || !nomeEl.value.trim() || !opmEl.value.trim()) {
+        mostrarErro('Preencha o posto/graduação, o R.E., o nome completo e a OPM.');
+        return;
+      }
+
+      if (!entradaEl.value || !saidaEl.value) {
+        mostrarErro('Preencha as datas e os horários de entrada e saída.');
+        return;
+      }
+
+      const entrada = new Date(entradaEl.value);
+      const saida = new Date(saidaEl.value);
+      if (Number.isNaN(entrada.getTime()) || Number.isNaN(saida.getTime())) {
+        mostrarErro('Informe datas e horários válidos.');
+        return;
+      }
+      if (saida <= entrada) {
+        mostrarErro('A saída prevista deve ser posterior à entrada prevista.');
+        return;
+      }
+
+      // A falta somente fica confirmada ao término integral do serviço.
+      // A contagem inicia-se na primeira meia-noite posterior ao fim da escala.
+      const inicioContagem = meiaNoiteSomada(saida, 1);
+      const marcoAusencia = meiaNoiteSomada(saida, 2);
+      const marcoDesercao = meiaNoiteSomada(saida, 9);
+
+      document.getElementById('resPosto').textContent = postoEl.value.trim();
+      document.getElementById('resRe').textContent = reEl.value.trim();
+      document.getElementById('resNome').textContent = nomeEl.value.trim();
+      document.getElementById('resOpm').textContent = opmEl.value.trim();
+      document.getElementById('resEntrada').textContent = formatar(entrada);
+      document.getElementById('resSaida').textContent = formatar(saida);
+      document.getElementById('falta').textContent = formatar(saida);
+      document.getElementById('inicioContagem').textContent = formatar(inicioContagem);
+      document.getElementById('ausencia').textContent = formatar(marcoAusencia);
+      document.getElementById('desercao').textContent = formatar(marcoDesercao);
+      resultado.style.display = 'block';
+      resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('limpar').addEventListener('click', () => {
+      form.reset();
+      erro.style.display = 'none';
+      resultado.style.display = 'none';
+      postoEl.focus();
+    });
+
+    document.getElementById('imprimir').addEventListener('click', () => {
+      if (resultado.style.display !== 'block') {
+        mostrarErro('Calcule os marcos antes de imprimir.');
+        return;
+      }
+
+      const janelaRelatorio = window.open('', '_blank', 'width=900,height=760');
+      if (!janelaRelatorio) {
+        erro.textContent = 'Não foi possível abrir o relatório. Permita a abertura de janelas para este arquivo e tente novamente.';
+        erro.style.display = 'block';
+        return;
+      }
+
+      const conteudo = (id) => escaparHTML(document.getElementById(id).textContent);
+      const geradoEm = escaparHTML(new Intl.DateTimeFormat('pt-BR', {
+        dateStyle: 'long',
+        timeStyle: 'short'
+      }).format(new Date()));
+
+      janelaRelatorio.document.open();
+      janelaRelatorio.document.write(`<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de ausência e deserção</title>
+  <style>
+    @page { size: A4; margin: 18mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #edf1f5; color: #172235; font-family: Arial, Helvetica, sans-serif; }
+    .report { width: min(800px, calc(100% - 32px)); margin: 28px auto; padding: 36px; background: #fff; border-radius: 12px; box-shadow: 0 8px 28px rgba(16, 31, 52, .13); }
+    .header { padding-bottom: 18px; border-bottom: 3px solid #a99657; text-align: center; }
+    .report-brand { display: flex; align-items: center; gap: 13px; margin-bottom: 18px; padding: 12px 16px; color: #fff; background: linear-gradient(135deg, #343d28, #65724b); border-radius: 9px; text-align: left; }
+    .report-brand svg { width: 42px; height: 42px; flex: 0 0 42px; fill: none; stroke: #e2d49b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .report-brand small { display: block; color: #d9dcbf; font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .report-brand strong { display: block; margin-top: 2px; font-size: 17px; text-transform: uppercase; }
+    h1 { margin: 0; color: #3f4a2f; font-size: 24px; line-height: 1.2; }
+    h2 { margin: 26px 0 10px; color: #3f4a2f; font-size: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 10px 12px; border: 1px solid #d8dee7; vertical-align: top; }
+    th { width: 22%; background: #f2f5f8; color: #34445a; text-align: left; }
+    .marks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .mark-card { padding: 14px 16px; border: 1px solid #d8dee7; border-left: 4px solid #a99657; border-radius: 7px; }
+    .mark-card small { display: block; margin-bottom: 6px; color: #5d6878; font-weight: 700; text-transform: uppercase; }
+    .mark-card strong { display: block; color: #3f4a2f; font-size: 15px; line-height: 1.35; }
+    .note { margin: 24px 0 0; padding: 12px 14px; background: #f7f4e9; border-radius: 7px; color: #4d4a3d; font-size: 12px; line-height: 1.5; }
+    .generated { margin-top: 18px; color: #687486; font-size: 11px; text-align: right; }
+    .report-actions { display: flex; justify-content: flex-end; gap: 10px; width: min(800px, calc(100% - 32px)); margin: 0 auto 28px; }
+    button { padding: 11px 18px; border: 0; border-radius: 7px; cursor: pointer; font-weight: 700; }
+    .print { background: #3f4a2f; color: #fff; }
+    .close { background: #dce2e9; color: #24344a; }
+    @media (max-width: 650px) {
+      .report { padding: 22px; }
+      .report-brand { padding: 9px 11px; }
+      h1 { font-size: 20px; }
+      .marks { grid-template-columns: 1fr; }
+      th { width: 34%; }
+    }
+    @media print {
+      body { background: #fff; }
+      .report { width: 100%; margin: 0; padding: 0; border-radius: 0; box-shadow: none; }
+      .report-actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="report">
+    <header class="header">
+      <div class="report-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="12" width="46" height="43" rx="9"></rect><path d="M20 8v10M44 8v10M9 24h46"></path><circle cx="33" cy="39" r="10"></circle><path d="M33 33v7l5 3"></path></svg><div><small>Controle de prazos</small><strong>Ausência e Deserção</strong></div></div>
+      <h1>Relatório de cálculo de ausência e deserção</h1>
+    </header>
+
+    <h2>Identificação do policial militar</h2>
+    <table>
+      <tr><th>Posto/Graduação</th><td>${conteudo('resPosto')}</td><th>R.E.</th><td>${conteudo('resRe')}</td></tr>
+      <tr><th>Nome completo</th><td colspan="3">${conteudo('resNome')}</td></tr>
+      <tr><th>OPM</th><td colspan="3">${conteudo('resOpm')}</td></tr>
+    </table>
+
+    <h2>Serviço previsto</h2>
+    <table>
+      <tr><th>Entrada</th><td>${conteudo('resEntrada')}</td></tr>
+      <tr><th>Saída</th><td>${conteudo('resSaida')}</td></tr>
+    </table>
+
+    <h2>Marcos calculados</h2>
+    <section class="marks">
+      <article class="mark-card"><small>Confirmação da falta</small><strong>${conteudo('falta')}</strong></article>
+      <article class="mark-card"><small>Início da contagem</small><strong>${conteudo('inicioContagem')}</strong></article>
+      <article class="mark-card"><small>Parte de Ausência Ilegal</small><strong>${conteudo('ausencia')}</strong></article>
+      <article class="mark-card"><small>Deserção</small><strong>${conteudo('desercao')}</strong></article>
+    </section>
+
+    <p class="note"><strong>Critério utilizado:</strong> a falta é confirmada após o término integral do serviço. A contagem começa na primeira zero hora posterior ao fim da escala; a Parte de Ausência Ilegal é indicada 24 horas depois do início da contagem. Resultado orientativo, sujeito à conferência das circunstâncias e normas aplicáveis.</p>
+    <p class="generated">Relatório gerado em ${geradoEm}.</p>
+  </main>
+  <div class="report-actions">
+    <button class="close" type="button" onclick="window.close()">Fechar</button>
+    <button class="print" type="button" onclick="window.print()">Imprimir relatório</button>
+  </div>
+</body>
+</html>`);
+      janelaRelatorio.document.close();
+      janelaRelatorio.focus();
+    });
+  </script>
+</body>
+</html>
